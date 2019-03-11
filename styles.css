@@ -1,0 +1,177 @@
+/* building the cover */
+
+.main{
+    width: 388.25px;
+    height: 600px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border: solid lightgray 0.25px;
+}
+
+.box_1{
+    background-color: white;
+    width: 850px;
+    height: 850px;
+    transform: rotate(-15deg);
+    position: relative;
+    top: -35px;
+    left: -55px;
+    mix-blend-mode: difference;
+}
+
+.box_2{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    transform: rotate(35deg);
+    position: relative;
+    top: 175px;
+    left: 50px;
+    animation: box_2_animate 7s linear infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    mix-blend-mode: difference;
+    transition: border-radius 4s ease, transform-origin 4s ease;
+    overflow: hidden;
+    z-index: 0;
+
+}
+
+.title{
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    top: 260px;
+    left: 70px;
+    font-family: 'Libre Baskerville', serif;
+    z-index: 1;
+    mix-blend-mode: difference;
+}
+
+.author {
+    font-family: 'Muli', sans-serif;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 265px;
+    left: 215px;
+    z-index: 1;
+    mix-blend-mode: difference;
+
+}
+
+.box_3{
+    background-color: black;
+    width: 250px;
+    height: 250px;
+    transform: rotate(17deg);
+    position: absolute;
+    top: 140px;
+    left: 130px;
+    animation: box_3_animate 5s linear infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    transition: border-radius 4s ease;
+    z-index:2;
+
+}
+
+.box_4{
+    background-color: white;
+    width: 135px;
+    height: 135px;
+    transform: rotate(25deg);
+    position: relative;
+    top: 70px;
+    left: 85px;
+    animation: box_4_animate 5s linear infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    z-index: 3;
+    transition: border-radius 4s ease;
+    transform-origin: 90px 70px;
+}
+
+.part1{
+    animation: title_1 2s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+.part2{
+    animation: title_2 2s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+/* animations */
+
+
+@keyframes box_4_animate {
+    0% {transform: rotate(25deg);}
+    25% {transform: rotate(115deg);}
+    50% {transform: rotate(205deg);}
+    75% {transform: rotate(295deg);}
+    100% {transform: rotate(385deg);}
+}
+
+
+@keyframes box_3_animate {
+     0% {transform: rotate(17deg);}
+    50% {transform: rotate(-163deg);}
+     100% {transform: rotate(-343deg);}
+ }
+
+@keyframes box_2_animate {
+    0% {transform: rotate(35deg);}
+    50% {transform: rotate(216deg);}
+    100% {transform: rotate(396deg);}
+}
+
+.main:hover .box_2 {
+    border-radius: 100%;
+    transition: 4s;
+    transform-origin: 174px 150px;
+}
+
+.main:hover .box_3 {
+    border-radius: 100%;
+
+}
+
+.main:hover .box_4 {
+    border-radius: 100%;
+    transition: 4s;
+}
+
+.title:hover {
+    color: red;
+    mix-blend-mode: normal;
+}
+
+.author:hover {
+    color: red;
+    mix-blend-mode: normal;
+}
+/*
+@keyframes title_1{
+    0% {color: red; mix-blend-mode: normal;}
+    49% {color: red; mix-blend-mode: normal;}
+    50% {color: white; mix-blend-mode: difference;}
+    99% {color: white; mix-blend-mode: difference;}
+    100% {color: red; mix-blend-mode: normal;}
+}
+
+@keyframes title_2{
+    0% {color: white; mix-blend-mode: difference;}
+    49% {color: white; mix-blend-mode: difference;}
+    50% {color: red; mix-blend-mode: normal;}
+    99% {color: red; mix-blend-mode: normal;}
+    100% {color: white; mix-blend-mode: difference;}
+}
+*/
+
+
+
